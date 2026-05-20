@@ -5,7 +5,9 @@ import static org.hamcrest.Matchers.*;
 
 import org.testng.annotations.Test;
 
-public class GetUsersTest {
+import base.BaseTest;
+
+public class GetUsersTest extends BaseTest {
 
     @Test
     public void validateUsersAPI() {
@@ -13,7 +15,7 @@ public class GetUsersTest {
         given()
 
         .when()
-            .get("https://reqres.in/api/users?page=2")
+            .get("/api/users?page=2")
 
         .then()
             .statusCode(200)
